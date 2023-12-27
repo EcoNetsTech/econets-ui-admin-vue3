@@ -155,7 +155,7 @@ const getList = async () => {
           id: 3,
           name: '索尼',
           picUrl:
-            'http://127.0.0.1:48080/admin-api/infra/file/4/get/f5b7a536306cd1180a42a2211a8212dc23de6b949d30c30d036caa063042f928.png',
+            'http://127.0.0.1:58080/admin-api/infra/file/4/get/f5b7a536306cd1180a42a2211a8212dc23de6b949d30c30d036caa063042f928.png',
           sort: [+new Date(), +new Date('2023-12-31')],
           status: 10
         }
