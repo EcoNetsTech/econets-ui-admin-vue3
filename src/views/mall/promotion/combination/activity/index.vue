@@ -109,7 +109,7 @@
             link
             type="danger"
             @click="handleClose(scope.row.id)"
-            v-if="scope.row.status === 0"
+            v-if="scope.row.status === GlobalErrorCodeStatusEnum.SUCCESS"
             v-hasPermi="['promotion:combination-activity:close']"
           >
             关闭
@@ -147,6 +147,7 @@ import CombinationActivityForm from './CombinationActivityForm.vue'
 import { formatDate } from '@/utils/formatTime'
 import { fenToYuanFormat } from '@/utils/formatter'
 import { fenToYuan } from '@/utils'
+import { GlobalErrorCodeStatusEnum } from '@/utils/constants'
 
 defineOptions({ name: 'PromotionBargainActivity' })
 

@@ -9,6 +9,7 @@ export interface FileClientConfig {
   mode?: string
   endpoint?: string
   bucket?: string
+  hostFolder?: string
   accessKey?: string
   accessSecret?: string
   domain: string

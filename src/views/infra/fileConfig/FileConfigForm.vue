@@ -77,6 +77,9 @@
       <el-form-item v-if="formData.storage === 20" label="存储 bucket" prop="config.bucket">
         <el-input v-model="formData.config.bucket" placeholder="请输入 bucket" />
       </el-form-item>
+      <el-form-item v-if="formData.storage === 20" label="文件主路径" prop="config.hostFolder">
+        <el-input v-model="formData.config.hostFolder" placeholder="请输入 文件主路径 hostFolder" />
+      </el-form-item>
       <el-form-item v-if="formData.storage === 20" label="accessKey" prop="config.accessKey">
         <el-input v-model="formData.config.accessKey" placeholder="请输入 accessKey" />
       </el-form-item>
@@ -131,6 +134,7 @@ const formRules = reactive<FormRules>({
     mode: [{ required: true, message: '连接模式不能为空', trigger: 'change' }],
     endpoint: [{ required: true, message: '节点地址不能为空', trigger: 'blur' }],
     bucket: [{ required: true, message: '存储 bucket 不能为空', trigger: 'blur' }],
+    hostFolder: [{ required: true, message: '文件主路径 hostFolder 不能为空', trigger: 'blur' }],
     accessKey: [{ required: true, message: 'accessKey 不能为空', trigger: 'blur' }],
     accessSecret: [{ required: true, message: 'accessSecret 不能为空', trigger: 'blur' }],
     domain: [{ required: true, message: '自定义域名不能为空', trigger: 'blur' }]

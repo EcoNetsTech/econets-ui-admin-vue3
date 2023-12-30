@@ -1,5 +1,4 @@
 <template>
-  <doc-alert title="系统日志" url="https://doc.iocoder.cn/system-log/" />
 
   <ContentWrap>
     <!-- 搜索工作栏 -->
@@ -95,7 +94,7 @@
       <el-table-column label="操作人" align="center" prop="userNickname" />
       <el-table-column label="操作结果" align="center" prop="status">
         <template #default="scope">
-          <span>{{ scope.row.resultCode === 0 ? '成功' : '失败' }}</span>
+          <span>{{ scope.row.resultCode === GlobalErrorCodeStatusEnum.SUCCESS ? '成功' : '失败' }}</span>
         </template>
       </el-table-column>
       <el-table-column
@@ -141,6 +140,7 @@ import { dateFormatter } from '@/utils/formatTime'
 import download from '@/utils/download'
 import * as OperateLogApi from '@/api/system/operatelog'
 import OperateLogDetail from './OperateLogDetail.vue'
+import { GlobalErrorCodeStatusEnum } from '@/utils/constants'
 
 defineOptions({ name: 'SystemOperateLog' })
 

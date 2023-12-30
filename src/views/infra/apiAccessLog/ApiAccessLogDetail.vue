@@ -31,8 +31,8 @@
       </el-descriptions-item>
       <el-descriptions-item label="请求耗时">{{ detailData.duration }} ms</el-descriptions-item>
       <el-descriptions-item label="操作结果">
-        <div v-if="detailData.resultCode === 0">正常</div>
-        <div v-else-if="detailData.resultCode > 0">
+        <div v-if="detailData.resultCode === GlobalErrorCodeStatusEnum.SUCCESS">正常</div>
+        <div v-else-if="detailData.resultCode > GlobalErrorCodeStatusEnum.SUCCESS">
           失败 | {{ detailData.resultCode }} | {{ detailData.resultMsg }}
         </div>
       </el-descriptions-item>
@@ -44,6 +44,7 @@
 import { DICT_TYPE } from '@/utils/dict'
 import { formatDate } from '@/utils/formatTime'
 import * as ApiAccessLog from '@/api/infra/apiAccessLog'
+import { GlobalErrorCodeStatusEnum } from '@/utils/constants'
 
 defineOptions({ name: 'ApiAccessLogDetail' })
 

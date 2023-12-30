@@ -61,7 +61,7 @@
             link
             type="primary"
             @click="handleTransfer(scope.row)"
-            v-if="scope.row.transferStatus === 0"
+            v-if="scope.row.transferStatus === GlobalErrorCodeStatusEnum.SUCCESS"
             v-hasPermi="['pay:transfer:create']"
           >
             发起转账
@@ -89,6 +89,7 @@ import * as DemoTransferApi from '@/api/pay/demo/transfer'
 import * as PayTransferApi from '@/api/pay/transfer'
 import DemoTransferForm from './DemoTransferForm.vue'
 import CreatePayTransfer from '../../transfer/CreatePayTransfer.vue'
+import { GlobalErrorCodeStatusEnum } from '@/utils/constants'
 import { DICT_TYPE } from '@/utils/dict'
 const message = useMessage() // 消息弹窗
 const { t } = useI18n() // 国际化

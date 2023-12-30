@@ -13,14 +13,14 @@
       :on-error="submitFormError"
       :on-exceed="handleExceed"
       :on-success="submitFormSuccess"
-      accept=".jpg, .png, .gif"
+      accept=".jpg, .png, .jpeg, .webp, .gif"
       drag
     >
       <i class="el-icon-upload"></i>
       <div class="el-upload__text"> 将文件拖到此处，或 <em>点击上传</em></div>
       <template #tip>
         <div class="el-upload__tip" style="color: red">
-          提示：仅允许导入 jpg、png、gif 格式文件！
+          提示：仅允许导入 jpg、png、gif、jpeg、webp 格式文件！
         </div>
       </template>
     </el-upload>

@@ -1,5 +1,4 @@
 <template>
-  <doc-alert title="公众号接入" url="https://doc.iocoder.cn/mp/account/" />
 
   <!-- 搜索工作栏 -->
   <ContentWrap>

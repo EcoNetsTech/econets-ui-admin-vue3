@@ -1,0 +1,42 @@
+{
+  "name": "rd",
+  "version": "2.0.1",
+  "description": "Read all directory recursively 列出（遍历）目录下的所有文件，包括子目录",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "promises.js",
+    "promises.d.ts"
+  ],
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\" \"**/*.js\"",
+    "test": "npm run format && mocha -t 5000",
+    "test-cov": "istanbul cover _mocha --report lcovonly -- -t 5000 -R spec && cat ./coverage/lcov.info | coveralls",
+    "prepublish": "npm run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leizongmin/node-rd.git"
+  },
+  "keywords": [
+    "directory",
+    "recursively"
+  ],
+  "author": "Zongmin Lei <leizongmin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leizongmin/node-rd/issues"
+  },
+  "homepage": "https://github.com/leizongmin/node-rd#readme",
+  "devDependencies": {
+    "coveralls": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.6"
+  },
+  "dependencies": {
+    "@types/node": "^10.3.6"
+  }
+}

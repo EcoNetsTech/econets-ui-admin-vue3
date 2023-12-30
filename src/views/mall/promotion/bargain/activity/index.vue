@@ -112,7 +112,7 @@
             link
             type="danger"
             @click="handleClose(scope.row.id)"
-            v-if="scope.row.status === 0"
+            v-if="scope.row.status === GlobalErrorCodeStatusEnum.SUCCESS"
             v-hasPermi="['promotion:bargain-activity:close']"
           >
             关闭
@@ -149,6 +149,7 @@ import * as BargainActivityApi from '@/api/mall/promotion/bargain/bargainActivit
 import BargainActivityForm from './BargainActivityForm.vue'
 import { formatDate } from '@/utils/formatTime'
 import { fenToYuanFormat } from '@/utils/formatter'
+import { GlobalErrorCodeStatusEnum } from '@/utils/constants'
 
 defineOptions({ name: 'PromotionBargainActivity' })
 

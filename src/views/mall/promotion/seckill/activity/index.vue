@@ -121,7 +121,7 @@
             link
             type="danger"
             @click="handleClose(scope.row.id)"
-            v-if="scope.row.status === 0"
+            v-if="scope.row.status === GlobalErrorCodeStatusEnum.SUCCESS"
             v-hasPermi="['promotion:seckill-activity:close']"
           >
             关闭
@@ -160,6 +160,7 @@ import SeckillActivityForm from './SeckillActivityForm.vue'
 import { formatDate } from '@/utils/formatTime'
 import { fenToYuanFormat } from '@/utils/formatter'
 import { fenToYuan } from '@/utils'
+import { GlobalErrorCodeStatusEnum } from '@/utils/constants'
 
 defineOptions({ name: 'SeckillActivity' })
 

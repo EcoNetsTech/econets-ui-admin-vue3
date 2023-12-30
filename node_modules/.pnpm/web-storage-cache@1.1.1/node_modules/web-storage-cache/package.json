@@ -1,0 +1,37 @@
+{
+    "name": "web-storage-cache",
+    "author": "wuchangming",
+    "license": "MIT",
+    "description": "web storage, improved.",
+    "keywords": [
+        "localstorage",
+        "storage",
+        "expires"
+    ],
+    "version": "1.1.1",
+    "homepage": "https://github.com/WQTeam/web-storage-cache",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/WQTeam/web-storage-cache.git"
+    },
+    "browser": "dist/web-storage-cache.min.js",
+    "main": "src/web-storage-cache.js",
+    "types": "src/web-storage-cache.d.ts",
+    "bugs": {
+        "url": "https://github.com/WQTeam/web-storage-cache/issues"
+    },
+    "scripts": {
+        "test": "grunt test",
+        "build": "grunt build"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "growl": "^1.10.5",
+        "grunt": "^1.0.4",
+        "grunt-contrib-jshint": "~0.11.0",
+        "grunt-contrib-uglify": "~0.8.0",
+        "grunt-contrib-watch": "~0.5.0",
+        "grunt-mocha": "^1.2.0",
+        "mocha": "^6.1.4"
+    }
+}

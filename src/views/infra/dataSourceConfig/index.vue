@@ -36,7 +36,7 @@
             type="primary"
             @click="openForm('update', scope.row.id)"
             v-hasPermi="['infra:data-source-config:update']"
-            :disabled="scope.row.id === 0"
+            :disabled="scope.row.id === GlobalErrorCodeStatusEnum.SUCCESS"
           >
             编辑
           </el-button>
@@ -45,7 +45,7 @@
             type="danger"
             @click="handleDelete(scope.row.id)"
             v-hasPermi="['infra:data-source-config:delete']"
-            :disabled="scope.row.id === 0"
+            :disabled="scope.row.id === GlobalErrorCodeStatusEnum.SUCCESS"
           >
             删除
           </el-button>
@@ -61,6 +61,7 @@
 import { dateFormatter } from '@/utils/formatTime'
 import * as DataSourceConfigApi from '@/api/infra/dataSourceConfig'
 import DataSourceConfigForm from './DataSourceConfigForm.vue'
+import { GlobalErrorCodeStatusEnum } from '@/utils/constants'
 
 defineOptions({ name: 'InfraDataSourceConfig' })
 

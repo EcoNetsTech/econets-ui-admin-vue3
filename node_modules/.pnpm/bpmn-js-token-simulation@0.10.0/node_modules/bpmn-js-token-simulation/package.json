@@ -1,0 +1,69 @@
+{
+  "name": "bpmn-js-token-simulation",
+  "version": "0.10.0",
+  "description": "bpmn-js token simulation extension",
+  "main": "index.js",
+  "scripts": {
+    "all": "run-s lint test bundle",
+    "bundle": "webpack",
+    "bundle:watch": "webpack -w",
+    "start": "webpack-dev-server --content-base ./example --open-page index.html",
+    "lint": "eslint .",
+    "test": "karma start",
+    "dev": "npm test -- --auto-watch --no-single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpmn-io/bpmn-js-token-simulation.git"
+  },
+  "contributors": [
+    {
+      "name": "Patrick Dehn",
+      "url": "https://github.com/pedesen"
+    },
+    {
+      "name": "Philipp Fromme",
+      "url": "https://github.com/philippfromme"
+    },
+    {
+      "name": "Sebastian Warnke",
+      "url": "https://github.com/sebwarnke"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bpmn-io/bpmn-js-token-simulation/issues"
+  },
+  "homepage": "https://github.com/bpmn-io/bpmn-js-token-simulation#readme",
+  "devDependencies": {
+    "bpmn-font": "^0.8.0",
+    "bpmn-js": "^7.2.0",
+    "chai": "^4.2.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "eslint": "^5.12.0",
+    "eslint-plugin-bpmn-io": "^0.6.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^2.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-sinon-chai": "^2.0.2",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^3.0.5",
+    "mocha": "^5.2.0",
+    "mocha-test-container-support": "^0.2.0",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^1.20.0",
+    "raw-loader": "^0.5.1",
+    "sinon": "^7.2.2",
+    "sinon-chai": "^3.3.0",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "min-dash": "^3.3.0",
+    "min-dom": "^0.2.0",
+    "svg.js": "^2.6.3"
+  }
+}

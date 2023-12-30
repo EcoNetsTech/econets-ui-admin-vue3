@@ -1,5 +1,4 @@
 <template>
-  <doc-alert title="支付功能开启" url="https://doc.iocoder.cn/pay/build/" />
   <!-- 搜索 -->
   <ContentWrap>
     <el-form

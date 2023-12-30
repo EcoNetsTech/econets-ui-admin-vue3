@@ -186,7 +186,7 @@ const loginData = reactive({
   loginForm: {
     tenantName: '用户',
     username: 'admin',
-    password: 'admin123',
+    password: '123456',
     captchaVerification: '',
     rememberMe: false
   }

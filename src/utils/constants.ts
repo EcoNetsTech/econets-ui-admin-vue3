@@ -10,6 +10,11 @@ export const CommonStatusEnum = {
   DISABLE: 1 // 禁用
 }
 
+// 服务接口状态枚举
+export const GlobalErrorCodeStatusEnum = {
+  SUCCESS: 200 // 成功
+}
+
 // 全局用户类型枚举
 export const UserTypeEnum = {
   MEMBER: 1, // 会员

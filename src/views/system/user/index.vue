@@ -1,7 +1,4 @@
 <template>
-  <doc-alert title="用户体系" url="https://doc.iocoder.cn/user-center/" />
-  <doc-alert title="三方登陆" url="https://doc.iocoder.cn/social-user/" />
-  <doc-alert title="Excel 导入导出" url="https://doc.iocoder.cn/excel-import-and-export/" />
 
   <el-row :gutter="20">
     <!-- 左侧部门树 -->
@@ -109,6 +106,16 @@
             prop="nickname"
             :show-overflow-tooltip="true"
           />
+          <el-table-column 
+            label="性别" 
+            prop="sex" 
+            align="center" 
+            :show-overflow-tooltip="true"
+            >
+            <template #default="scope">
+              <dict-tag :type="DICT_TYPE.SYSTEM_USER_SEX" :value="scope.row.sex" />
+            </template>
+          </el-table-column>
           <el-table-column
             label="部门"
             align="center"

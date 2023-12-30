@@ -1,0 +1,23 @@
+{
+  "name": "component-closest",
+  "description": "Find the closest ancestor matching a selector string",
+  "version": "0.1.4",
+  "author": "Jonathan Ong",
+  "dependencies": {
+    "component-matches-selector": "~0.1.5"
+  },
+  "browser": {
+    "matches-selector": "component-matches-selector"
+  },
+  "component": {
+    "scripts": {
+      "closest/index.js": "index.js"
+    }
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/component/closest.git"
+  }
+}

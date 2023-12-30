@@ -1,0 +1,32 @@
+{
+    "name": "@form-create/utils",
+    "version": "3.1.23",
+    "description": "",
+    "main": "./lib/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "files": [
+        "README.md",
+        "package.json",
+        "LICENSE",
+        "lib"
+    ],
+    "keywords": [
+        "@form-create"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xaboy/form-create.git"
+    },
+    "author": "xaboy",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/xaboy/form-create/issues"
+    },
+    "homepage": "http://www.form-create.com",
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "4e7b962efcda737671ba990b13d1b0f5fad2fc6e"
+}

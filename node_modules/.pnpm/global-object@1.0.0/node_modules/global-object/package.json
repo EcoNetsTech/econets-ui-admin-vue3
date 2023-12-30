@@ -1,0 +1,22 @@
+{
+  "name": "global-object",
+  "version": "1.0.0",
+  "description": "just the global object",
+  "main": "global-object.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebReflection/global-object.git"
+  },
+  "keywords": [
+    "global"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/WebReflection/global-object/issues"
+  },
+  "homepage": "https://github.com/WebReflection/global-object"
+}

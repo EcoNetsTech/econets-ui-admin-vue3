@@ -1,5 +1,4 @@
 <template>
-  <doc-alert title="接口文档" url="https://doc.iocoder.cn/api-doc/" />
 
   <ContentWrap>
     <IFrame :src="src" />

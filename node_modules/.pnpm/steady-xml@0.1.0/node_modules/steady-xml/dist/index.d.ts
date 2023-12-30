@@ -1,0 +1,76 @@
+declare enum XmlNodeType {
+    Root = "Root",
+    Declaration = "Declaration",
+    Comment = "Comment",
+    DocumentType = "DocumentType",
+    Element = "Element",
+    Text = "Text",
+    Instruction = "Instruction",
+    CDATA = "CDATA"
+}
+interface XmlJsObject {
+    name?: string;
+    prefix?: string;
+    type: XmlNodeType;
+    attributes?: Record<string, unknown>;
+    value?: any;
+    selfClosing?: true;
+    children?: XmlJsObject[];
+}
+declare class XmlNode {
+    name: string;
+    type: XmlNodeType;
+    parent: XmlNode | null;
+    children: XmlNode[] | null;
+    attributes: Record<string, unknown>;
+    value: any;
+    selfClosing: boolean;
+    prefix: string;
+    constructor(type: XmlNodeType, parent?: XmlNode | null, value?: any);
+    setName(value: string): this;
+    setType(value: XmlNodeType): this;
+    setParent(value: XmlNode | null): this;
+    setChildren(value: XmlNode[] | null): this;
+    setAttributes(value: Record<string, unknown>): this;
+    setValue(value: any): this;
+    setSelfClosing(value: boolean): this;
+    setPrefix(value: string): this;
+    addAttribute(name: string, value: unknown): this;
+    removeAttribute(name: string): this;
+    addChild(childNode: XmlNode): this;
+    removeChild(childNode: XmlNode): this;
+    toJsObject(): XmlJsObject;
+    toXmlString(indentChar?: string, newLine?: string, indentCount?: number): string;
+    toJSON(): XmlJsObject;
+    toString(): string;
+}
+
+declare type TextValue = string | number | boolean | null;
+interface ParseProps {
+    ignoreAttributes: boolean;
+    parseNodeValue: boolean;
+    trimValues: boolean;
+    prefixInName: boolean;
+    valueProcessor: (value: string, type: XmlNodeType, name: string) => TextValue;
+    attributeProcessor: (value: string, name: string, type: XmlNodeType) => TextValue;
+}
+interface BuildProps {
+    nameKey: string;
+    typeKey: string;
+    valueKey: string;
+    attributesKey: string | false;
+    childrenKey: string;
+    selfClosingKey: string | false;
+    prefixKey: string | false;
+    trimValues: boolean;
+    isRoot: boolean;
+    prefixInName: boolean;
+    valueProcessor: (value: TextValue, type: XmlNodeType, name: string) => TextValue;
+    attributeProcessor: (value: TextValue, name: string, type: XmlNodeType) => TextValue;
+}
+
+declare function parseXmlString(xmlString: string, props?: Partial<ParseProps>): XmlNode;
+
+declare function buildFromJson<T extends Record<string, any>>(json: T, props?: Partial<BuildProps>): XmlNode;
+
+export { BuildProps, ParseProps, XmlJsObject, XmlNode, XmlNodeType, buildFromJson, parseXmlString };

@@ -1,5 +1,4 @@
 <template>
-  <doc-alert title="系统日志" url="https://doc.iocoder.cn/system-log/" />
 
   <ContentWrap>
     <!-- 搜索工作栏 -->
@@ -111,7 +110,7 @@
       </el-table-column>
       <el-table-column label="操作结果" align="center" prop="status">
         <template #default="scope">
-          {{ scope.row.resultCode === 0 ? '成功' : '失败(' + scope.row.resultMsg + ')' }}
+          {{ scope.row.resultCode === GlobalErrorCodeStatusEnum.SUCCESS ? '成功' : '失败(' + scope.row.resultMsg + ')' }}
         </template>
       </el-table-column>
       <el-table-column label="操作" align="center">
@@ -145,6 +144,7 @@ import download from '@/utils/download'
 import { formatDate } from '@/utils/formatTime'
 import * as ApiAccessLogApi from '@/api/infra/apiAccessLog'
 import ApiAccessLogDetail from './ApiAccessLogDetail.vue'
+import { GlobalErrorCodeStatusEnum } from '@/utils/constants'
 
 defineOptions({ name: 'InfraApiAccessLog' })
 
