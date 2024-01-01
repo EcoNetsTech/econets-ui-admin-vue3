@@ -61,16 +61,16 @@
         </template>
       </el-table-column>
       <el-table-column
-        label="过期时间"
+        label="创建时间"
         align="center"
-        prop="expiresTime"
+        prop="createTime"
         :formatter="dateFormatter"
         width="180"
       />
       <el-table-column
-        label="创建时间"
+        label="过期时间"
         align="center"
-        prop="createTime"
+        prop="expiresTime"
         :formatter="dateFormatter"
         width="180"
       />
