@@ -129,7 +129,7 @@
       <el-col :span="24" style="padding-right: 10px; padding-left: 10px">
         <el-form-item>
           <div class="w-[100%] flex justify-between">
-            <el-link href="https://doc.iocoder.cn/" target="_blank">📚开发指南</el-link>
+            <el-link href="https://doc.econets.cn/" target="_blank">📚开发指南</el-link>
           </div>
         </el-form-item>
       </el-col>

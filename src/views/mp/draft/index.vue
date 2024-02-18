@@ -1,5 +1,4 @@
 <template>
-  <doc-alert title="公众号图文" url="https://doc.iocoder.cn/mp/article/" />
 
   <!-- 搜索工作栏 -->
   <ContentWrap>

@@ -1,5 +1,4 @@
 <template>
-  <doc-alert title="数据库文档" url="https://doc.iocoder.cn/db-doc/" />
 
   <ContentWrap title="数据库文档">
     <div class="mb-10px">

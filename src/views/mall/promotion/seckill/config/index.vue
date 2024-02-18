@@ -1,5 +1,4 @@
 <template>
-  <doc-alert title="功能开启" url="https://doc.iocoder.cn/mall/build/" />
 
   <!-- 搜索工作栏 -->
   <ContentWrap>
@@ -82,7 +81,7 @@ import { CommonStatusEnum } from '@/utils/constants'
 const message = useMessage() // 消息弹窗
 // tableObject：表格的属性对象，可获得分页大小、条数等属性
 // tableMethods：表格的操作对象，可进行获得分页、删除记录等操作
-// 详细可见：https://doc.iocoder.cn/vue3/crud-schema/
+// 详细可见：https://doc.econets.cn/vue3/crud-schema/
 const { tableObject, tableMethods } = useTable({
   getListApi: SeckillConfigApi.getSeckillConfigPage, // 分页接口
   delListApi: SeckillConfigApi.deleteSeckillConfig // 删除接口
